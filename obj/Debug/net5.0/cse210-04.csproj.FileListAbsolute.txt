@@ -1,0 +1,5 @@
+C:\Users\chauy\OneDrive - BYU-Idaho\Spring 2022\CSE 210-16\cse210-04\obj\Debug\net5.0\cse210-04.csproj.AssemblyReference.cache
+C:\Users\chauy\OneDrive - BYU-Idaho\Spring 2022\CSE 210-16\cse210-04\obj\Debug\net5.0\cse210-04.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chauy\OneDrive - BYU-Idaho\Spring 2022\CSE 210-16\cse210-04\obj\Debug\net5.0\cse210-04.AssemblyInfoInputs.cache
+C:\Users\chauy\OneDrive - BYU-Idaho\Spring 2022\CSE 210-16\cse210-04\obj\Debug\net5.0\cse210-04.AssemblyInfo.cs
+C:\Users\chauy\OneDrive - BYU-Idaho\Spring 2022\CSE 210-16\cse210-04\obj\Debug\net5.0\cse210-04.csproj.CoreCompileInputs.cache
