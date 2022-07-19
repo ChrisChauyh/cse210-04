@@ -13,3 +13,9 @@ C:\Users\chauy\OneDrive - BYU-Idaho\Spring 2022\CSE 210-16\cse210-04\obj\Debug\n
 C:\Users\chauy\OneDrive - BYU-Idaho\Spring 2022\CSE 210-16\cse210-04\obj\Debug\net6.0\cse210-04.pdb
 C:\Users\chauy\OneDrive - BYU-Idaho\Spring 2022\CSE 210-16\cse210-04\obj\Debug\net6.0\cse210-04.genruntimeconfig.cache
 C:\Users\chauy\OneDrive - BYU-Idaho\Spring 2022\CSE 210-16\cse210-04\obj\Debug\net6.0\ref\cse210-04.dll
+C:\Users\chauy\OneDrive - BYU-Idaho\Spring 2022\CSE 210-16\cse210-04\bin\Debug\net6.0\Raylib-cs.dll
+C:\Users\chauy\OneDrive - BYU-Idaho\Spring 2022\CSE 210-16\cse210-04\bin\Debug\net6.0\runtimes\linux-x64\native\libraylib.so
+C:\Users\chauy\OneDrive - BYU-Idaho\Spring 2022\CSE 210-16\cse210-04\bin\Debug\net6.0\runtimes\osx-x64\native\libraylib.dylib
+C:\Users\chauy\OneDrive - BYU-Idaho\Spring 2022\CSE 210-16\cse210-04\bin\Debug\net6.0\runtimes\win-x64\native\raylib.dll
+C:\Users\chauy\OneDrive - BYU-Idaho\Spring 2022\CSE 210-16\cse210-04\bin\Debug\net6.0\runtimes\win-x86\native\raylib.dll
+C:\Users\chauy\OneDrive - BYU-Idaho\Spring 2022\CSE 210-16\cse210-04\obj\Debug\net6.0\cse210-04.csproj.CopyComplete

@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "2xc1ZrpntPEtKPnvPzmsVqLDntGAvk1w4Gl93n0pp13Kk41Ah7u9dZLVHJ/1fXGXJw57Gdqmitmla1JZ6Ig8WA==",
+  "dgSpecHash": "zLBniwGBrbg78D0/8DQwuIaHYo95bv2GR/G0yw8b7f5Y45/xgvsnyr2Q0t5McN8nP5saGXNqZw1I6RAX5QuugQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\chauy\\OneDrive - BYU-Idaho\\Spring 2022\\CSE 210-16\\cse210-04\\cse210-04.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\chauy\\.nuget\\packages\\raylib-cs\\3.7.0.1\\raylib-cs.3.7.0.1.nupkg.sha512",
+    "C:\\Users\\chauy\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+  ],
   "logs": []
 }

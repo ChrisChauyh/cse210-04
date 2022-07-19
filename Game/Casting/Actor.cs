@@ -12,8 +12,8 @@ namespace Unit04.Game.Casting
     /// </summary>
     public class Actor
     {
-        private string text = "";
-        private int fontSize = 15;
+        private string text = "123";
+        private int fontSize = 20;
         private Color color = new Color(255, 255, 255); // white
         private Point position = new Point(0, 0);
         private Point velocity = new Point(0, 0);
@@ -91,10 +91,7 @@ namespace Unit04.Game.Casting
         /// <exception cref="ArgumentException">When color is null.</exception>
         public void SetColor(Color color)
         {
-            if (color == null)
-            {
-                throw new ArgumentException("color can't be null");
-            }
+
             this.color = color;
         }
 
@@ -107,10 +104,7 @@ namespace Unit04.Game.Casting
         /// </exception>
         public void SetFontSize(int fontSize)
         {
-            if (fontSize <= 0)
-            {
-                throw new ArgumentException("fontSize must be greater than zero");
-            }
+
             this.fontSize = fontSize;
         }
 
@@ -121,24 +115,13 @@ namespace Unit04.Game.Casting
         /// <exception cref="ArgumentException">When position is null.</exception>
         public void SetPosition(Point position)
         {
-            if (position == null)
-            {
-                throw new ArgumentException("position can't be null");
-            }
+
             this.position = position;
         }
 
-        /// <summary>
-        /// Sets the actor's text to the given value.
-        /// </summary>
-        /// <param name="text">The given text.</param>
-        /// <exception cref="ArgumentException">When text is null.</exception>
         public void SetText(string text)
         {
-            if (text == null)
-            {
-                throw new ArgumentException("text can't be null");
-            }
+
             this.text = text;
         }
 
@@ -149,10 +132,8 @@ namespace Unit04.Game.Casting
         /// <exception cref="ArgumentException">When velocity is null.</exception>
         public void SetVelocity(Point velocity)
         {
-            if (velocity == null)
-            {
-                throw new ArgumentException("velocity can't be null");
-            }
+
+
             this.velocity = velocity;
         }
 

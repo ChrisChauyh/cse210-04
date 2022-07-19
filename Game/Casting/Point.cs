@@ -9,6 +9,7 @@ namespace Unit04.Game.Casting
     /// </summary>
     public class Point
     {
+        public static int newY = 3;
         private int x = 0;
         private int y = 0;
 
@@ -21,6 +22,12 @@ namespace Unit04.Game.Casting
         {
             this.x = x;
             this.y = y;
+        }
+
+        public Point Down(int newY)
+        {
+            this.y += newY;
+            return new Point(x,newY);
         }
 
         /// <summary>
