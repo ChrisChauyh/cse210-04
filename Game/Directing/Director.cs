@@ -66,7 +66,7 @@ namespace Unit04.Game.Directing
             List<Actor> Rocks = cast.GetActors("Rock");
             List<Actor> Gems = cast.GetActors("Gems");
 
-            banner.SetText("Score:");
+            banner.SetText("Score: " + score);
             int maxX = videoService.GetWidth();
             int maxY = videoService.GetHeight();
             robot.MoveNext(maxX, maxY);

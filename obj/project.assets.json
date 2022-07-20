@@ -121,11 +121,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\chauy\\OneDrive - BYU-Idaho\\Spring 2022\\CSE 210-16\\cse210-04\\cse210-04.csproj",
+      "projectUniqueName": "C:\\Users\\chauy\\OneDrive - BYU-Idaho\\Spring 2022\\CSE 210-16\\cse210-04\\cse210-04.csproj",
       "projectName": "cse210-04",
-      "projectPath": "c:\\Users\\chauy\\OneDrive - BYU-Idaho\\Spring 2022\\CSE 210-16\\cse210-04\\cse210-04.csproj",
+      "projectPath": "C:\\Users\\chauy\\OneDrive - BYU-Idaho\\Spring 2022\\CSE 210-16\\cse210-04\\cse210-04.csproj",
       "packagesPath": "C:\\Users\\chauy\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\chauy\\OneDrive - BYU-Idaho\\Spring 2022\\CSE 210-16\\cse210-04\\obj\\",
+      "outputPath": "C:\\Users\\chauy\\OneDrive - BYU-Idaho\\Spring 2022\\CSE 210-16\\cse210-04\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\chauy\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -172,7 +172,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
