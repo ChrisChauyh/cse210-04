@@ -13,7 +13,8 @@ namespace Unit04.Game.Directing
     /// </summary>
     public class Director
     {
-        public int score = 0;
+
+        public int score { get; set; }= 20;
         private KeyboardService keyboardService = null;
         private VideoService videoService = null;
 
@@ -52,46 +53,46 @@ namespace Unit04.Game.Directing
         {
             Actor robot = cast.GetFirstActor("Player");
             Point velocity = keyboardService.GetDirection();
-            robot.SetVelocity(velocity);     
+            robot.SetVelocity(velocity);    
+
         }
 
         /// <summary>
         /// Updates the robot's position and resolves any collisions with artifacts.
         /// </summary>
         /// <param name="cast">The given cast.</param>
-        private void DoUpdates(Cast cast)
+        public void DoUpdates(Cast cast)
         {
-            Actor banner = cast.GetFirstActor("banner");
-            Actor robot = cast.GetFirstActor("Player");
+            Actor banner = (Actor)cast.GetFirstActor("banner");
+            Actor robot = (Actor)cast.GetFirstActor("Player");
             List<Actor> Rocks = cast.GetActors("Rock");
             List<Actor> Gems = cast.GetActors("Gems");
-
-            banner.SetText("Score: " + score);
             int maxX = videoService.GetWidth();
             int maxY = videoService.GetHeight();
             robot.MoveNext(maxX, maxY);
-            
+            banner.SetText("Score: " + 0);
+
 
             foreach (Actor actor in Rocks)
             {
                 Point getlocation = actor.GetPosition();
                 getlocation.Down(20);
                 actor.SetPosition(getlocation);
-                if (robot.GetPosition().Equals(actor.GetPosition() ))
+                if (robot.GetPosition().Equals(actor.GetPosition()))
                 {
                     Artifact artifact = (Artifact) actor;
                     score++;
                     banner.SetText("Score: " + score);
                 }
             } 
-            foreach (Actor actor in Gems)
+            foreach (Actor actor1 in Gems)
             {
-                Point getlocation = actor.GetPosition();
+                Point getlocation = actor1.GetPosition();
                 getlocation.Down(20);
-                actor.SetPosition(getlocation);
-                if (robot.GetPosition().Equals(actor.GetPosition() ))
+                actor1.SetPosition(getlocation);
+                if (robot.GetPosition().Equals(actor1.GetPosition()))
                 {
-                    Artifact artifact = (Artifact) actor;
+                    Artifact artifact = (Artifact) actor1;
                     score--;
                     banner.SetText("Score: " + score);
                 }

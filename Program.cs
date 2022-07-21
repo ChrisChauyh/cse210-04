@@ -58,7 +58,7 @@ namespace Unit04
             {
 
                 int x = random.Next(1, COLS);
-                int y = random.Next(1, ROWS);
+                int y = 0;
                 Point position = new Point(x, y);
                 position = position.Scale(CELL_SIZE);
 
@@ -66,8 +66,7 @@ namespace Unit04
                 int g = random.Next(0, 256);
                 int b = random.Next(0, 256);
                 Color color = new Color(r, g, b);
-
-                //create rocks
+                 //create rocks
                 Artifact rocks = new Artifact();
                 rocks.SetText("O");
                 rocks.SetFontSize(FONT_SIZE);
@@ -75,7 +74,7 @@ namespace Unit04
                 rocks.SetPosition(position);
                 cast.AddActor("Rock", rocks);
                 int x1 = random.Next(1, COLS);
-                int y1 = random.Next(1, ROWS);
+                int y1 = 0;
                 Point position1 = new Point(x1, y1);
                 position1 = position1.Scale(CELL_SIZE);
 
