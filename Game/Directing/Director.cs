@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Unit04.Game.Casting;
 using Unit04.Game.Services;
-
+using System;
 
 namespace Unit04.Game.Directing
 {
@@ -63,43 +63,42 @@ namespace Unit04.Game.Directing
         /// <param name="cast">The given cast.</param>
         public void DoUpdates(Cast cast)
         {
-            Actor banner = (Actor)cast.GetFirstActor("banner");
-            Actor robot = (Actor)cast.GetFirstActor("Player");
+            Actor banner = cast.GetFirstActor("banner");
+            Actor robot = cast.GetFirstActor("Player");
             List<Actor> Rocks = cast.GetActors("Rock");
             List<Actor> Gems = cast.GetActors("Gems");
             int maxX = videoService.GetWidth();
             int maxY = videoService.GetHeight();
             robot.MoveNext(maxX, maxY);
-            banner.SetText("Score: " + 0);
+
 
 
             foreach (Actor actor in Rocks)
             {
                 Point getlocation = actor.GetPosition();
-                getlocation.Down(20);
+                getlocation.Down(15);
                 actor.SetPosition(getlocation);
                 if (robot.GetPosition().Equals(actor.GetPosition()))
                 {
                     Artifact artifact = (Artifact) actor;
                     score++;
-                    banner.SetText("Score: " + score);
+                    Console.WriteLine(score);
                 }
             } 
-            foreach (Actor actor1 in Gems)
+            foreach (Actor actor in Gems)
             {
-                Point getlocation = actor1.GetPosition();
-                getlocation.Down(20);
-                actor1.SetPosition(getlocation);
-                if (robot.GetPosition().Equals(actor1.GetPosition()))
+                Point getlocation = actor.GetPosition();
+                getlocation.Down(10);
+                actor.SetPosition(getlocation);
+                if (robot.GetPosition().Equals(actor.GetPosition()))
                 {
-                    Artifact artifact = (Artifact) actor1;
+                    Artifact artifact = (Artifact) actor;
                     score--;
-                    banner.SetText("Score: " + score);
+                    Console.WriteLine(score);
                 }
 
             } 
-
-
+                        banner.SetText("Score: " + score);
         }
 
         /// <summary>

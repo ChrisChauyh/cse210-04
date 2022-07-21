@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System;
 namespace Unit04.Game.Casting
 {
     /// <summary>
@@ -8,7 +10,6 @@ namespace Unit04.Game.Casting
     /// </summary>
     public class Artifact : Actor
     {
-        private string message = "";
 
         /// <summary>
         /// Constructs a new instance of an Artifact.
@@ -16,23 +17,9 @@ namespace Unit04.Game.Casting
         public Artifact()
         {
         }
+        public int pointValue;
 
-        /// <summary>
-        /// Gets the artifact's message.
-        /// </summary>
-        /// <returns>The message.</returns>
-        public string GetMessage()
-        {
-            return message;
-        }
-
-        /// <summary>
-        /// Sets the artifact's message to the given value.
-        /// </summary>
-        /// <param name="message">The given message.</param>
-        public void SetMessage(string message)
-        {
-            this.message = message;
-        }
+        public static int dark = 80;
+      
     }
 }
