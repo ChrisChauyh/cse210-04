@@ -64,21 +64,25 @@ namespace Unit04.Game.Directing
         public void DoUpdates(Cast cast)
         {
             Actor banner = cast.GetFirstActor("banner");
-            Actor robot = cast.GetFirstActor("Player");
+
             List<Actor> Rocks = cast.GetActors("Rock");
             List<Actor> Gems = cast.GetActors("Gems");
             int maxX = videoService.GetWidth();
             int maxY = videoService.GetHeight();
-            robot.MoveNext(maxX, maxY);
+                            Actor robot = cast.GetFirstActor("Player");
+                                                        robot.MoveNext(maxX, maxY);
 
 
 
             foreach (Actor actor in Rocks)
             {
+
                 Point getlocation = actor.GetPosition();
+
                 getlocation.Down(15);
                 actor.SetPosition(getlocation);
-                if (robot.GetPosition().Equals(actor.GetPosition()))
+                
+                if (getlocation == robot.GetPosition())
                 {
                     Artifact artifact = (Artifact) actor;
                     score++;
@@ -94,7 +98,6 @@ namespace Unit04.Game.Directing
                 {
                     Artifact artifact = (Artifact) actor;
                     score--;
-                    Console.WriteLine(score);
                 }
 
             } 

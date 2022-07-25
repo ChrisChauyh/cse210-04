@@ -27,7 +27,7 @@ namespace Unit04.Game.Casting
         public Point Down(int newY)
         {
             this.y += newY;
-            return new Point(x,newY);
+            return new Point(x,y);
         }
 
         /// <summary>
