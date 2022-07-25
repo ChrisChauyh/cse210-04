@@ -70,10 +70,6 @@ namespace unit04_greed.Game.Directing
             robot.SetVelocity(velocity); 
         }
 
-        /// <summary>
-        /// Updates the robot's position and resolves any collisions with artifacts.
-        /// </summary>
-        /// <param name="cast">The given cast.</param>
         private void DoUpdates(Cast cast)
         {
 

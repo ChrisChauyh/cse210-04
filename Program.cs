@@ -14,15 +14,14 @@ namespace unit04_greed
     /// </summary>
     class Program
     {
-        private static int FRAME_RATE = 7;
+        private static int FRAME_RATE = 15;
         private static int MAX_X = 900;
         private static int MAX_Y = 600;
         private static int CELL_SIZE = 15;
         private static int FONT_SIZE = 15;
         private static int COLS = 60;
         private static int ROWS = 40;
-        private static string CAPTION = "Greed";
-        private static string DATA_PATH = "Data/messages.txt";
+        private static string CAPTION = "Greed game";
         private static Color WHITE = new Color(255, 255, 255);
         private static int DEFAULT = 20;
 
@@ -67,7 +66,7 @@ namespace unit04_greed
                 Point position = new Point(x, y);
                 position = position.Scale(CELL_SIZE);
 
-                int r = 1;
+                int r = 255;
                 int g = 255;
                 int b = 1;
                 Color color = new Color(r, g, b);
@@ -92,8 +91,8 @@ namespace unit04_greed
                 position = position.Scale(CELL_SIZE);
 
                 int r = 255;
-                int g = 1;
-                int b = 1;
+                int g = 20;
+                int b = 147;
                 Color color = new Color(r, g, b);
 
                 Artifact artifact = new Artifact();

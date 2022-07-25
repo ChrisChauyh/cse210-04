@@ -17,7 +17,7 @@ namespace unit04_greed.Game.Services
         private string caption = "";
         private int width = 640;
         private int height = 480;
-        private int frameRate = 0;
+        private int frameRate = 60;
         private bool debug = false;
 
         /// <summary>

@@ -18,25 +18,10 @@ namespace unit04_greed.Game.Casting
         public class Artifact:Actor{
             private int score = 0;
 
-        
-
-
-    // 2) Create the class constructor. Use the following method comment.
-        
-        /// <summary>
-        /// Constructs a new instance of Artifact.
-        /// </summary>
             public Artifact(){
 
             }
        
-
-    // 3) Create the GetMessage() method. Use the following method comment.
-        
-        /// <summary>
-        /// Gets the artifact's message.
-        /// </summary>
-        /// <returns>The message as a string.</returns>
             public int GetScore(){
                 
                 return score;
