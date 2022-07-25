@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using Raylib_cs;
-using Unit04.Game.Casting;
+using unit04_greed.Game.Casting;
 
 
-namespace Unit04.Game.Services
+namespace unit04_greed.Game.Services
 {
     /// <summary>
     /// <para>Outputs the game state.</para>
@@ -13,11 +13,11 @@ namespace Unit04.Game.Services
     /// </summary>
     public class VideoService
     {
-        private int cellSize = 13;
+        private int cellSize = 15;
         private string caption = "";
-        private int width = 900;
-        private int height = 900;
-        private int frameRate = 5;
+        private int width = 640;
+        private int height = 480;
+        private int frameRate = 0;
         private bool debug = false;
 
         /// <summary>
@@ -50,8 +50,11 @@ namespace Unit04.Game.Services
         public void ClearBuffer()
         {
             Raylib.BeginDrawing();
-            Raylib.ClearBackground(Raylib_cs.Color.DARKGRAY);
-
+            Raylib.ClearBackground(Raylib_cs.Color.BLACK);
+            if (debug)
+            {
+                DrawGrid();
+            }
         }
 
         /// <summary>
@@ -142,7 +145,7 @@ namespace Unit04.Game.Services
         {
             for (int x = 0; x < width; x += cellSize)
             {
-                Raylib.DrawLine(x, 0, x, height, Raylib_cs.Color.RED);
+                Raylib.DrawLine(x, 0, x, height, Raylib_cs.Color.GRAY);
             }
             for (int y = 0; y < height; y += cellSize)
             {

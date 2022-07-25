@@ -1,9 +1,16 @@
 using System.Collections.Generic;
-using Unit04.Game.Casting;
-using Unit04.Game.Services;
+using unit04_greed.Game.Casting;
+using unit04_greed.Game.Services;
 using System;
 
-namespace Unit04.Game.Directing
+using System.IO;
+using System.Linq;
+
+using unit04_greed.Game.Directing;
+
+
+
+namespace unit04_greed.Game.Directing
 {
     /// <summary>
     /// <para>A person who directs the game.</para>
@@ -13,8 +20,7 @@ namespace Unit04.Game.Directing
     /// </summary>
     public class Director
     {
-
-        public int score { get; set; }= 20;
+        public int score = 0;
         private KeyboardService keyboardService = null;
         private VideoService videoService = null;
 
@@ -34,7 +40,7 @@ namespace Unit04.Game.Directing
         /// </summary>
         /// <param name="cast">The given cast.</param>
         public void StartGame(Cast cast)
-        {
+        { 
             videoService.OpenWindow();
             while (videoService.IsWindowOpen())
             {
@@ -51,57 +57,53 @@ namespace Unit04.Game.Directing
         /// <param name="cast">The given cast.</param>
         private void GetInputs(Cast cast)
         {
-            Actor robot = cast.GetFirstActor("Player");
+            List<Actor> artifacts = cast.GetActors("artifacts");
+            foreach (Actor actor in artifacts){
+                Point artifactvelocity = keyboardService.MoveArtifact();
+                actor.SetVelocity(artifactvelocity);
+                int maxX = videoService.GetWidth();
+                int maxY = videoService.GetHeight();
+                actor.MoveNext(maxX, maxY);
+            }
+            Actor robot = cast.GetFirstActor("robot");
             Point velocity = keyboardService.GetDirection();
-            robot.SetVelocity(velocity);    
-
+            robot.SetVelocity(velocity); 
         }
 
         /// <summary>
         /// Updates the robot's position and resolves any collisions with artifacts.
         /// </summary>
         /// <param name="cast">The given cast.</param>
-        public void DoUpdates(Cast cast)
+        private void DoUpdates(Cast cast)
         {
-            Actor banner = cast.GetFirstActor("banner");
 
-            List<Actor> Rocks = cast.GetActors("Rock");
-            List<Actor> Gems = cast.GetActors("Gems");
+            Actor banner = cast.GetFirstActor("banner");
+            Actor robot = cast.GetFirstActor("robot");
+            List<Actor> artifacts = cast.GetActors("artifacts");
+
+            banner.SetText($"Score: {score.ToString()}");
             int maxX = videoService.GetWidth();
             int maxY = videoService.GetHeight();
-                            Actor robot = cast.GetFirstActor("Player");
-                                                        robot.MoveNext(maxX, maxY);
+            robot.MoveNext(maxX, maxY);
 
-
-
-            foreach (Actor actor in Rocks)
+            Random random = new Random();
+            foreach (Actor actor in artifacts)
             {
-
-                Point getlocation = actor.GetPosition();
-
-                getlocation.Down(15);
-                actor.SetPosition(getlocation);
                 
-                if (getlocation == robot.GetPosition())
-                {
-                    Artifact artifact = (Artifact) actor;
-                    score++;
-                    Console.WriteLine(score);
-                }
-            } 
-            foreach (Actor actor in Gems)
-            {
-                Point getlocation = actor.GetPosition();
-                getlocation.Down(10);
-                actor.SetPosition(getlocation);
                 if (robot.GetPosition().Equals(actor.GetPosition()))
                 {
                     Artifact artifact = (Artifact) actor;
-                    score--;
-                }
+                    score += artifact.GetScore();
+                    banner.SetText($"Score: {score.ToString()}");
 
+                    int x = random.Next(1, 60);
+                    int y = 0;
+                    Point position = new Point(x, y);
+                    position = position.Scale(15);
+
+                    artifact.SetPosition(position);
+                }
             } 
-                        banner.SetText("Score: " + score);
         }
 
         /// <summary>
