@@ -15,8 +15,8 @@ namespace unit04_greed.Game.Services
     {
         private int cellSize = 15;
         private string caption = "";
-        private int width = 640;
-        private int height = 480;
+        private int width = 500;
+        private int height = 500;
         private int frameRate = 60;
         private bool debug = false;
 
@@ -153,11 +153,7 @@ namespace unit04_greed.Game.Services
             }
         }
 
-        /// <summary>
-        /// Converts the given color to it's Raylib equivalent.
-        /// </summary>
-        /// <param name="color">The color to convert.</param>
-        /// <returns>A Raylib color.</returns>
+
         private Raylib_cs.Color ToRaylibColor(Casting.Color color)
         {
             int r = color.GetRed();

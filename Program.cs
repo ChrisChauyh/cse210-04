@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using unit04_greed.Game.Casting;
 using unit04_greed.Game.Directing;
 using unit04_greed.Game.Services;
@@ -26,10 +23,6 @@ namespace unit04_greed
         private static int DEFAULT = 20;
 
 
-        /// <summary>
-        /// Starts the program using the given arguments.
-        /// </summary>
-        /// <param name="args">The given arguments.</param>
         static void Main(string[] args)
         {
             // create the cast
@@ -51,8 +44,6 @@ namespace unit04_greed
             robot.SetPosition(new Point(MAX_X/2, MAX_Y - 30));
             cast.AddActor("robot", robot);
 
-            // load the messages
-            //List<string> messages = File.ReadAllLines(DATA_PATH).ToList<string>();
 
             // create the artifacts
             Random random = new Random();
@@ -100,7 +91,7 @@ namespace unit04_greed
                 artifact.SetFontSize(FONT_SIZE);
                 artifact.SetColor(color);
                 artifact.SetPosition(position);
-                artifact.SetScore(-1);
+                artifact.SetScore(-4);
                 cast.AddActor("artifacts", artifact);
             }
 
@@ -111,7 +102,6 @@ namespace unit04_greed
             Director director = new Director(keyboardService, videoService);
             director.StartGame(cast);
 
-            // test comment
         }
     }
 }

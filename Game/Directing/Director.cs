@@ -20,7 +20,7 @@ namespace unit04_greed.Game.Directing
     /// </summary>
     public class Director
     {
-        public int score = 0;
+        public int score = 20;
         private KeyboardService keyboardService = null;
         private VideoService videoService = null;
 
@@ -82,6 +82,7 @@ namespace unit04_greed.Game.Directing
             int maxY = videoService.GetHeight();
             robot.MoveNext(maxX, maxY);
 
+            //chekc if collision happens
             Random random = new Random();
             foreach (Actor actor in artifacts)
             {
